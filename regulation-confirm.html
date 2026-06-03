@@ -1,10 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Регламент подтверждения встреч — Матриус</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .confirm-hero-inner { grid-template-columns: 1fr !important; }
+      .confirm-hero-img { display: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,8 +35,16 @@
 
 <section class="module-hero">
   <div class="container">
-    <div class="module-indicator">Должностные обязанности</div>
-    <h1>Регламент подтверждения встреч</h1>
+    <div class="confirm-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Регламент подтверждения встреч</h1>
+        <p class="hero-text">Кто, когда и как подтверждает шоу‑уроки — обязанности преподавателя и первой линии.</p>
+      </div>
+      <div class="confirm-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/003.png" alt="Подтверждение встреч" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -38,121 +52,139 @@
 
 <section class="section">
   <div class="container">
-    <p>Регламент подтверждения встреч</p>
 
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Кто и когда подтверждает
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+        <div>
+          <p style="font-weight:600; color:var(--text); margin-bottom:8px;">Преподаватель — в день урока</p>
+          <ul class="key-points">
+            <li>Выходит на связь за 30 минут до первой встречи.</li>
+            <li>Берёт список своих учеников из таблицы.</li>
+            <li>Обзванивает всех по списку.</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-weight:600; color:var(--text); margin-bottom:8px;">Первая линия — за день до урока</p>
+          <ul class="key-points">
+            <li>Подтверждает вечером накануне.</li>
+            <li>Делает 2 попытки дозвона по каждому клиенту.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <h2 class="section-title" style="margin-bottom:24px;">Действия преподавателя</h2>
 
+    <div class="fixation-steps" style="margin-bottom:48px;">
 
-<ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:6px">
-<li style="color:var(--text-muted);font-size:.95rem">Кто и когда подтверждает</li>
-</ol>
-<p>Преподаватель в день урока:</p>
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>За 30 минут до первой встречи</h4>
+          <ul class="key-points">
+            <li>Открыть таблицу со слотами и списком своих учеников.</li>
+            <li>Отметить, кого нужно подтвердить в первую половину дня и во вторую.</li>
+          </ul>
+        </div>
+      </div>
 
-<p>Выходит на связь за 30 минут до своей первой встречи.​</p>
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Приоритет обзвона</h4>
+          <ul class="key-points">
+            <li>Сначала — ученики на ближайшие слоты (например, 10:00–13:00).</li>
+            <li>Затем — ученики на вечернее время (20:00, 19:00, 18:00...) — прозванивать в выбранное окно, например 14:00–15:00.</li>
+          </ul>
+        </div>
+      </div>
 
-<p>Берёт список учеников по ориентиру из таблицы (слоты, где он стоит как преподаватель).​</p>
+      <div class="fixation-step">
+        <div class="fixation-step-num">3</div>
+        <div class="fixation-step-content">
+          <h4>Количество попыток</h4>
+          <p>До каждого ученика — <strong style="color:var(--text);">2 попытки дозвона</strong>. Если не дозвонились — отправляем сообщение по шаблону.</p>
+        </div>
+      </div>
 
-<p>Делает обзвон всех своих учеников по этому списку.</p>
+    </div>
 
-<p>Первая линия:</p>
+    <h2 class="section-title" style="margin-bottom:24px;">Каналы связи и сообщения</h2>
 
-<p>Подтверждает встречи за день до урока вечером.​</p>
+    <div class="info-block" style="margin-bottom:48px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Какой канал использовать
+      </div>
+      <p style="margin-bottom:12px;">Смотрим, откуда ранее отправляли клиенту отбивку / ссылку:</p>
+      <ul class="key-points" style="margin-bottom:16px;">
+        <li>Корпоративный Telegram</li>
+        <li>E-mail</li>
+        <li>WhatsApp (если там шла первичная отбивка)</li>
+      </ul>
+      <p>Если не дозвонились — пишем в <strong style="color:var(--text);">тот же канал</strong>: напоминание о времени урока + ссылка + просьба подтвердить, что придут.</p>
+    </div>
 
-<p>Делает два донабора (2 попытки дозвона по каждому клиенту).​</p>
+    <h2 class="section-title" style="margin-bottom:24px;">Действия первой линии</h2>
 
+    <div class="fixation-steps" style="margin-bottom:48px;">
 
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Вечером, за день до урока</h4>
+          <ul class="key-points">
+            <li>Берём список завтрашних встреч.</li>
+            <li>По каждому клиенту — 2 попытки дозвона.</li>
+            <li>При НДЗ — фиксируем статус и пишем в тот же мессенджер, откуда отправляли отбивку.</li>
+          </ul>
+        </div>
+      </div>
 
-<ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:6px">
-<li style="color:var(--text-muted);font-size:.95rem">Действия преподавателя в день урока</li>
-</ol>
-<p>За 30 минут до первой встречи:</p>
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Задача первой линии</h4>
+          <ul class="key-points">
+            <li>Максимально подтвердить расписание на завтра к вечеру.</li>
+            <li>Минимизировать «сюрпризы» для преподавателя в день урока.</li>
+          </ul>
+        </div>
+      </div>
 
-<p>Открыть таблицу со слотами и списком записанных на тебя учеников.​</p>
+    </div>
 
-<p>Отметить, кого нужно подтвердить в первую половину дня и во вторую.​</p>
+    <h2 class="section-title" style="margin-bottom:24px;">Краткий чек-лист</h2>
 
-<p>Приоритет обзвона:</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
 
-<p>Сначала ученики на ближайшие слоты (например, 10:00–13:00).​</p>
+      <div class="scenario-card">
+        <div class="scenario-label">Преподаватель — день урока</div>
+        <ul class="key-points">
+          <li>За 30 мин до первой встречи — открыл таблицу слотов.</li>
+          <li>Расставил приоритеты: сначала ближайшие уроки, потом вечерний блок.</li>
+          <li>Сделал 2 попытки дозвона каждому.</li>
+          <li>При НДЗ — отправил сообщение в тот же канал, что и отбивка.</li>
+        </ul>
+      </div>
 
-<p>Затем блок учеников, записанных на вечернее время (20:00, 19:00, 18:00, 17:00 и т.п.) — прозвонить их в выбранное окно, например 14:00–15:00.​</p>
+      <div class="scenario-card">
+        <div class="scenario-label">Первая линия — за день до</div>
+        <ul class="key-points">
+          <li>Вечером — взял список завтрашних встреч.</li>
+          <li>По каждому ученику — 2 донабора.</li>
+          <li>При НДЗ — сообщение в том же мессенджере, что был использован для отбивки.</li>
+        </ul>
+      </div>
 
-<p>Количество попыток:</p>
-
-<p>До каждого ученика делаем до двух попыток дозвона (2 донабора).​</p>
-
-<p>Если не дозвонились — отправляем сообщение ШАБЛОНЫ</p>
-
-
-
-<ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:6px">
-<li style="color:var(--text-muted);font-size:.95rem">Каналы связи и сообщения</li>
-</ol>
-<p>Где смотрим, какой мессенджер использовать:</p>
-
-<p>Смотрим, откуда ранее отправляли клиенту отбивку/ссылку:</p>
-
-<p>корпоративный Telegram,</p>
-
-<p>e-mail,</p>
-
-<p>WhatsApp (если там шла первичная отбивка).​</p>
-
-<p>Если не дозвонились:</p>
-
-<p>Пишем клиенту в тот же канал, откуда раньше отправляли отбивку/ссылку.​</p>
-
-<p>Сообщение в формате: напоминание о времени урока + ссылка (если нужно) + просьба подтвердить, что придёт.​</p>
-
-
-
-<ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:6px">
-<li style="color:var(--text-muted);font-size:.95rem">Действия первой линии (за день до урока)</li>
-</ol>
-<p>Вечером, за день до урока:</p>
-
-<p>Берём список завтрашних встреч.​</p>
-
-<p>По каждому клиенту:</p>
-
-<p>Делаем до двух попыток дозвона (2 донабора).​</p>
-
-<p>Если НДЗ — фиксируем статус и пишем в тот же мессенджер, откуда отправляли отбивку (Telegram/почта/WhatsApp по тому же принципу).​</p>
-
-<p>Задача первой линии:</p>
-
-<p>Максимально подтвердить расписание на завтра к вечеру.​</p>
-
-<p>Минимизировать «сюрпризы» для преподавателя в день урока.​</p>
-
-
-
-<ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:6px">
-<li style="color:var(--text-muted);font-size:.95rem">Краткий чек-лист</li>
-</ol>
-<p>Преподаватель, день урока:</p>
-
-<p>За 30 минут до первой встречи:</p>
-
-<p>Открыл таблицу слотов.​</p>
-
-<p>Отметил приоритеты: сначала ближайшие уроки, потом вечерний блок.​</p>
-
-<p>Сделал 2 попытки дозвона каждому.</p>
-
-<p>При НДЗ — отправил сообщение в тот же канал, что и отбивка.</p>
-
-<p>Первая линия, за день до:</p>
-
-<p>Вечером:</p>
-
-<p>По каждому ученику 2 донабора.</p>
-
-<p>При НДЗ — сообщение в том же мессенджере, что был использован для отбивки.</p>
+    </div>
 
   </div>
 </section>
-
 
 <div class="container">
   <nav class="module-nav">
