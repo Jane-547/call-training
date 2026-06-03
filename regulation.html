@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регламент работы — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .reg-hero {
+      padding: 72px 0 64px;
+      background:
+        radial-gradient(ellipse 70% 80% at 80% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 10% 90%, rgba(88, 28, 196, 0.12) 0%, transparent 55%);
+      position: relative;
+      overflow: hidden;
+    }
+    .reg-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(124,58,237,0.1) 1px, transparent 0);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .reg-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+    .reg-hero-image img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 48px rgba(124, 58, 237, 0.35));
+    }
+    @media (max-width: 768px) {
+      .reg-hero { padding: 48px 0 40px; }
+      .reg-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .reg-hero-image { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="reg-hero">
+  <div class="container">
+    <div class="reg-hero-inner">
+      <div>
+        <div class="module-indicator">Регламент</div>
+        <h1 class="hero-title" style="margin:16px 0 20px;">Регламент работы</h1>
+        <p class="hero-text">Обязанности, настройка рабочего места, работа со слотами и сделками — всё в одном месте.</p>
+      </div>
+      <div class="reg-hero-image">
+        <img src="pictures/014.png" alt="Регламент работы Матриус">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div style="display:flex; flex-direction:column; gap:32px;">
+
+      <div class="info-block">
+        <div class="info-block-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Первоначальная настройка
+        </div>
+        <div class="how-list" style="gap:2px;">
+          <div class="how-item" style="padding:12px 0;">
+            <div class="how-num" style="font-size:1.6rem; min-width:36px;">1</div>
+            <div class="how-content"><p>Вы получите сообщение от технической поддержки с доступом к админке и GetCourse</p></div>
+          </div>
+          <div class="how-item" style="padding:12px 0;">
+            <div class="how-num" style="font-size:1.6rem; min-width:36px;">2</div>
+            <div class="how-content"><p>На почту придёт звонилка (телефония)</p></div>
+          </div>
+          <div class="how-item" style="padding:12px 0;">
+            <div class="how-num" style="font-size:1.6rem; min-width:36px;">3</div>
+            <div class="how-content"><p>Скачайте звонилку, разархивируйте в отдельную папку и запустите</p></div>
+          </div>
+          <div class="how-item" style="padding:12px 0;">
+            <div class="how-num" style="font-size:1.6rem; min-width:36px;">4</div>
+            <div class="how-content"><p>Авторизация произойдёт автоматически</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Рабочие пространства
+        </div>
+        <p style="margin-bottom:16px;">После входа у вас должно быть <strong style="color:var(--text);">три рабочих пространства:</strong></p>
+        <div class="success-list">
+          <div class="success-item">
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span><strong style="color:var(--text);">Google Таблицы</strong> — Matrius</span>
+          </div>
+          <div class="success-item">
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span><strong style="color:var(--text);">GetCourse</strong> — основная работа со сделками</span>
+          </div>
+          <div class="success-item">
+            <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span><strong style="color:var(--text);">Админка (слоты)</strong> — расписание шоу-уроков, всегда открыта: <a href="https://crm.genius-school.online/#/show-lessons" target="_blank" style="color:var(--accent-light); word-break:break-all;">crm.genius-school.online/#/show-lessons</a></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section-sm" style="padding:48px 0;">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:24px;">Разделы регламента</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+      <div class="module-card">
+        <div class="module-card-title">Должностные обязанности</div>
+        <p class="module-card-desc">Что входит в зону ответственности оператора.</p>
+        <div class="module-card-footer">
+          <a href="regulation-duties.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Дежурство</div>
+        <p class="module-card-desc">Порядок дежурств, смены и зоны покрытия.</p>
+        <div class="module-card-footer">
+          <a href="regulation-duty.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Работа со слотами</div>
+        <p class="module-card-desc">Как вести расписание и управлять слотами в админке.</p>
+        <div class="module-card-footer">
+          <a href="regulation-slots.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Регламент НДЗ</div>
+        <p class="module-card-desc">Действия при недозвоне: шаги 1, 2, 3.</p>
+        <div class="module-card-footer">
+          <a href="regulation-ndz.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Нецелевые лиды</div>
+        <p class="module-card-desc">Как квалифицировать и закрывать нецелевые заявки.</p>
+        <div class="module-card-footer">
+          <a href="regulation-nontarget.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Шаблоны сообщений</div>
+        <p class="module-card-desc">Готовые тексты для НДЗ, переносов, отмен и подключения.</p>
+        <div class="module-card-footer">
+          <a href="regulation-templates.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Мотивация</div>
+        <p class="module-card-desc">Система мотивации и KPI оператора.</p>
+        <div class="module-card-footer">
+          <a href="regulation-motivation.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Сброс после приветствия</div>
+        <p class="module-card-desc">Алгоритм действий, если клиент бросил трубку сразу.</p>
+        <div class="module-card-footer">
+          <a href="regulation-dropout.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Технические проблемы</div>
+        <p class="module-card-desc">Что делать при сбоях со связью, платформой или звонилкой.</p>
+        <div class="module-card-footer">
+          <a href="regulation-tech.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="index.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Главная</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

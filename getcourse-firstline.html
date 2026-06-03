@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Процесс первой линии — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .fl-hero-inner { grid-template-columns: 1fr !important; }
+      .fl-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link active">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="fl-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">GetCourse</div>
+        <h1 style="margin:16px 0 20px;">Процесс первой линии</h1>
+        <p class="hero-text">Полный цикл от регистрации клиента на ШУ до подтверждения встречи и закрытия заказа.</p>
+      </div>
+      <div class="fl-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/018.png" alt="Процесс первой линии" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Старт процесса -->
+    <div class="info-block" style="margin-bottom:32px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Как запускается процесс
+      </div>
+      <ul class="key-points" style="margin-bottom:16px;">
+        <li>После регистрации на ШУ у клиента автоматически создаётся заказ.</li>
+        <li>Для заказа запускается задача с автоматически назначенным ответственным.</li>
+        <li>Задача отображается в карточке пользователя и в карточке заказа.</li>
+        <li>Чтобы начать работу — нажмите <strong style="color:var(--text);">«Взять в работу»</strong>.</li>
+      </ul>
+      <img src="pictures/get_9.png" alt="Создание заказа" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+      <img src="pictures/get_10.png" alt="Взять в работу" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+    </div>
+
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Далее ставится задача на звонок
+      </div>
+      <p style="margin-bottom:12px;">По результату звонка (состоялся / не состоялся) сделка пойдёт по разному пути:</p>
+      <img src="pictures/get_11.png" alt="Пути воронки" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+    </div>
+
+    <!-- Звонок НЕ состоялся -->
+    <h2 class="section-title" style="margin-bottom:24px;">Звонок НЕ состоялся — этапы НДЗ</h2>
+
+    <div class="info-block" style="margin-bottom:24px;">
+      <p>Все сообщения уходят автоматически. Шаблоны: <a href="regulation-templates.html" style="color:var(--accent-light);">Шаблоны сообщений</a></p>
+    </div>
+
+    <img src="pictures/get_12.png" alt="Этапы НДЗ" style="max-width:100%;border-radius:8px;margin:0 0 24px;border:1px solid var(--border)">
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:40px;">
+      <div class="scenario-card">
+        <div class="scenario-label">НДЗ-1 — отправка сообщения необязательна</div>
+        <p>Ставим «Без сообщений». Задача на звонок согласно <a href="regulation-ndz.html" style="color:var(--accent-light);">Регламенту НДЗ</a>. Если звонок состоялся — заказ переходит в этап «Квал».</p>
+        <img src="pictures/get_13.png" alt="НДЗ-1" style="max-width:100%;border-radius:8px;margin:12px 0 0;border:1px solid var(--border)">
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">НДЗ-2 — обязательная отправка сообщения</div>
+        <p>Смотрим, есть ли переписка с клиентом — выбираем канал. Задача на звонок согласно регламенту. Если звонок состоялся — заказ переходит в этап «Квал».</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">НДЗ-3 — обязательная отправка сообщения</div>
+        <p>Задача на звонок согласно регламенту. Если звонок состоялся — заказ переходит в этап «Квал». Если нет — после выбора канала заказ автоматически отменяется, задача закрывается.</p>
+      </div>
+    </div>
+
+    <!-- Звонок состоялся -->
+    <h2 class="section-title" style="margin-bottom:24px;">Звонок состоялся — этап Квал</h2>
+
+    <div class="fixation-steps" style="margin-bottom:40px;">
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Сразу после успешного звонка — вопрос о следующем шаге</h4>
+          <img src="pictures/get_14.png" alt="Вопрос о следующем шаге" style="max-width:100%;border-radius:8px;margin:12px 0;border:1px solid var(--border)">
+          <ul class="key-points" style="margin-top:8px;">
+            <li><strong style="color:var(--text);">Перезвонить</strong> — попросит ввести дату и время, поставит задачу на звонок. Если не состоялся — уходит в НДЗ. Если состоялся — снова вопрос «перезвонить/переписка/квал».</li>
+            <li><strong style="color:var(--text);">Переписка</strong> — самостоятельно общаетесь с клиентом. По итогу: игнор (отменяет сделку) или позвонить (ставит задачу на звонок).
+              <img src="pictures/get_15.png" alt="Переписка" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+            </li>
+            <li><strong style="color:var(--text);">Квалифицирован</strong> — ведёт на чек-лист с данными, которые нужно зафиксировать.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Вопрос «Первый или второй ребёнок?»</h4>
+          <p style="margin-bottom:8px;">При первичном разговоре всегда выбираем <strong style="color:var(--text);">«первый ребёнок»</strong>. Вся информация (имя, возраст, класс, интересы, уровень чтения) указывается по первому ребёнку.</p>
+          <div class="warning-block" style="margin-top:12px;">
+            <div class="warning-block-title">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L1.5 15.5h15L9 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7v4M9 13v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Если у родителя два ребёнка
+            </div>
+            <ul class="warning-list">
+              <li>Первую заявку оформляем и квалифицируем по первому ребёнку.</li>
+              <li>После завершения создаём <strong style="color:#fca5a5;">отдельный заказ на второго ребёнка</strong>.</li>
+              <li>Никогда не заполняем данные сразу по двум детям в одной карточке.</li>
+            </ul>
+            <p style="margin-top:12px;">Видео: как создать заказ — <a href="https://disk.yandex.ru/i/RXWJMq_Wo4nNtg" target="_blank" style="color:var(--accent-light);">https://disk.yandex.ru/i/RXWJMq_Wo4nNtg</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">3</div>
+        <div class="fixation-step-content">
+          <h4>Заполняем квалификационные поля</h4>
+          <img src="pictures/get_16.png" alt="Квалификационные поля" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <ul class="key-points" style="margin-top:8px;">
+            <li><strong style="color:var(--text);">Приоритетный канал связи</strong> — то, что указал клиент для получения ссылки на ШУ.</li>
+            <li><strong style="color:var(--text);">name_kids</strong> — имя ребёнка (с большой буквы; если не уверены — переспросите).</li>
+            <li><strong style="color:var(--text);">age_kids</strong> — возраст ребёнка.</li>
+            <li><strong style="color:var(--text);">show_target</strong> — цель родителя на пробном уроке.</li>
+            <li><strong style="color:var(--text);">show_format</strong> — с какого устройства будет подключаться клиент.</li>
+          </ul>
+          <p style="margin-top:12px;">После заполнения всех полей нажимаем <strong style="color:var(--text);">«Готово»</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Запись в слот -->
+    <h2 class="section-title" style="margin-bottom:24px;">Как записать ребёнка в слот Админки</h2>
+
+    <div class="fixation-steps" style="margin-bottom:40px;">
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Переходим в Админку</h4>
+          <img src="pictures/get_17.png" alt="Открываем Админку" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p>Сайт: <a href="https://crm.genius-school.online/#/show-lessons" target="_blank" style="color:var(--accent-light);">crm.genius-school.online/#/show-lessons</a></p>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Выбираем раздел «Шоу-уроки», отдел продаж — Зерокодер, нажимаем поиск</h4>
+          <img src="pictures/get_18.png" alt="Фильтр Зерокодер" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p>Подробнее о выборе слотов: <a href="regulation-slots.html" style="color:var(--accent-light);">Работа со слотами</a></p>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">3</div>
+        <div class="fixation-step-content">
+          <h4>Выбираем слот и нажимаем «+»</h4>
+          <img src="pictures/get_19.png" alt="Добавить в слот" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">4</div>
+        <div class="fixation-step-content">
+          <h4>Выбираем GetCourse, вводим номер заказа</h4>
+          <img src="pictures/get_20.png" alt="Выбор GetCourse" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <img src="pictures/get_21.png" alt="Ввод номера заказа" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p style="margin-top:8px;">Ссылка может выглядеть так:</p>
+          <p style="word-break:break-all; color:var(--text-muted); font-size:0.9rem; margin:4px 0;">https://school-genius.club/sales/control/deal/update/id/<strong style="color:var(--text);">821710816</strong>#activeBlockItem=deals</p>
+          <img src="pictures/get_22.png" alt="ID в адресной строке" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p>Вводим то, что после <code style="background:var(--surface);padding:2px 6px;border-radius:4px;font-size:.85em">id/</code></p>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">5</div>
+        <div class="fixation-step-content">
+          <h4>Вводим имя ребёнка, выбираем предмет, нажимаем «Принять»</h4>
+          <img src="pictures/get_23.png" alt="Имя ребёнка и предмет" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p style="margin-top:8px;">Ученик считается записанным на урок:</p>
+          <img src="pictures/get_24.png" alt="Ребёнок записан" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p style="margin-top:8px;">Нажимаем <strong style="color:var(--text);">«Ребёнок записан»</strong> — обновите страницу и проверьте, что данные подтянулись.</p>
+          <img src="pictures/get_25.png" alt="Подтверждение записи" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Подтверждение ШУ -->
+    <h2 class="section-title" style="margin-bottom:24px;">Подтверждение ШУ</h2>
+
+    <div class="fixation-steps" style="margin-bottom:40px;">
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Ставим задачу на напоминание о ШУ</h4>
+          <img src="pictures/get_26.png" alt="Задача на напоминание" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p>Согласно <a href="regulation-confirm.html" style="color:var(--accent-light);">Регламенту подтверждения встреч</a> ставим себе задачу на подтверждение. Если ШУ сегодня — можно нажать «Выполнить» и пропустить шаг.</p>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Задача напоминания за день до ШУ</h4>
+          <img src="pictures/get_27.png" alt="Напоминание за день" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <p>Необходимо отправить сообщение и совершить звонок. Если урок «сегодня» — этап можно пропустить.</p>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">3</div>
+        <div class="fixation-step-content">
+          <h4>Задача «Подтвердить ШУ»</h4>
+          <img src="pictures/get_28.png" alt="Подтвердить ШУ" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid var(--border)">
+          <ul class="key-points" style="margin-top:8px;">
+            <li><strong style="color:var(--text);">Подтверждён</strong> — ставит тег «подтвержден_шу» и переводит задачу на вторую линию.</li>
+            <li><strong style="color:var(--text);">Не подтверждён</strong> — ставит тег «не подтвержден_шу» и переводит задачу на вторую линию.</li>
+            <li><strong style="color:var(--text);">Перезапись</strong> — попросит указать причину и вернёт на шаг «Поставьте дату и время напоминания».</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Перезапись -->
+    <h2 class="section-title" style="margin-bottom:24px;">Перезапись</h2>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:40px;">
+      <div class="scenario-card">
+        <div class="scenario-label">Сразу договорились о переносе</div>
+        <p>Открепите ребёнка от текущего ШУ, затем запишите заново в новый слот согласно инструкции записи. Проверьте, что данные по уроку появились в заказе.</p>
+        <img src="pictures/get_29.png" alt="Открепить от ШУ" style="max-width:100%;border-radius:8px;margin:12px 0 0;border:1px solid var(--border)">
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Неизвестное время, игнор и другие причины</div>
+        <p>В задаче нажимаем «Отложить» и ставим задачу на перезапись согласно регламенту.</p>
+        <img src="pictures/get_30.png" alt="Отложить задачу" style="max-width:100%;border-radius:8px;margin:12px 0 0;border:1px solid var(--border)">
+      </div>
+    </div>
+
+    <!-- Закрытие заказов -->
+    <h2 class="section-title" style="margin-bottom:24px;">Как закрывать заказы</h2>
+
+    <div class="info-block">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        Нецелевые лиды — <a href="regulation-nontarget.html" style="color:var(--accent-light);">инструкция</a>
+      </div>
+      <img src="pictures/get_31.png" alt="Закрытие заказа" style="max-width:100%;border-radius:8px;margin:12px 0;border:1px solid var(--border)">
+      <ul class="key-points" style="margin-top:4px;">
+        <li>В разделе «Состояние заказа» ставим <strong style="color:var(--text);">«Отменён»</strong>, выбираем причину.</li>
+        <li>В разделе «Состояние доски продаж» ставим <strong style="color:var(--text);">«Отменён»</strong>, выбираем причину.</li>
+        <li>Пишем примечание и нажимаем <strong style="color:var(--text);">«Сохранить»</strong>.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="getcourse.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Работа со сделками в GetCourse</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

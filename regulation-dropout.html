@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сброс после приветствия — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .dropout-hero-inner { grid-template-columns: 1fr !important; }
+      .dropout-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="dropout-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Сброс после приветствия</h1>
+        <p class="hero-text">Сброс — это не отказ. Как правильно перезвонить и не потерять клиента.</p>
+      </div>
+      <div class="dropout-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/005.png" alt="Сброс после приветствия" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Главное правило
+      </div>
+      <p>Сброс после приветствия — <strong style="color:var(--text);">это не отказ</strong> и не повод закрывать заявку. Клиент мог быть занят, отвлечён или испугаться незнакомого номера. Оператор не обижается, а спокойно перезванивает — берёт ответственность на «связь сорвалась / наверное, было неудобно».</p>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Алгоритм повторного звонка</h2>
+
+    <div class="fixation-steps" style="margin-bottom:40px;">
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Сбросили сразу после «Алло» — перезваниваем немедленно</h4>
+          <div class="quote-block" style="margin-top:8px;">
+            «Ой, здравствуйте, это снова [имя оператора] из онлайн‑школы Матриус. Кажется, в прошлый раз связь сорвалась, всякое бывает. Удобно сейчас пару минут поговорить?»
+          </div>
+        </div>
+      </div>
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Второй раз не ответили — ставим перезвон через 15–20 минут</h4>
+          <div class="quote-block" style="margin-top:8px;">
+            «Здравствуйте, это [имя оператора] из онлайн‑школы Матриус. Чуть раньше пробовала вам дозвониться, но, видимо, было неудобно или связь подвисла. Сейчас лучше, есть пару минут?»
+          </div>
+        </div>
+      </div>
+      <div class="fixation-step">
+        <div class="fixation-step-num">3</div>
+        <div class="fixation-step-content">
+          <h4>Дальше — обычный скрипт</h4>
+          <p>Продолжаем звонок как обычно, без упоминания сброса.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Почему клиент мог сбросить</h2>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:40px;">
+      <div class="scenario-card">
+        <div class="scenario-label">Был занят</div>
+        <p>В дороге, на кассе, параллельный звонок — не было возможности говорить прямо сейчас.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Незнакомый номер</div>
+        <p>Увидел незнакомый номер и среагировал автоматически, не успев подумать.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Не понял, кто звонит</div>
+        <p>Сбросил по инерции — не успел сориентироваться, кто это и зачем.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Шум рядом</div>
+        <p>Дети, шумное место — человек просто не смог нормально говорить в этот момент.</p>
+      </div>
+    </div>
+
+    <div class="warning-block">
+      <div class="warning-block-title">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L1.5 15.5h15L9 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7v4M9 13v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Чего делать не надо
+      </div>
+      <ul class="warning-list">
+        <li>Говорить с упрёком: «Вы только что сбросили» / «Почему не берёте трубку?»</li>
+        <li>Извиняться чрезмерно — достаточно «видимо, связь подвисла / было неудобно».</li>
+        <li>Закрывать лид после одного сброса — минимум 2–3 попытки в разные моменты дня.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

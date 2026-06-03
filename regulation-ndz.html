@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регламент НДЗ — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .ndz-hero-inner { grid-template-columns: 1fr !important; }
+      .ndz-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="ndz-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Регламент НДЗ</h1>
+        <p class="hero-text">Как работать с клиентами, которые не берут трубку: три касания, правила фиксации и финальные статусы.</p>
+      </div>
+      <div class="ndz-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/008.png" alt="Регламент НДЗ" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Цель и общие правила
+      </div>
+      <p style="margin-bottom:16px;">Не терять тёплых лидов, но не превращать НДЗ в бесконечный спам. Каждый НДЗ всегда заканчивается задачей на следующее касание или финальным статусом.</p>
+      <ul class="key-points">
+        <li>Недозвон — звонок, где клиент <strong style="color:var(--text);">не взял трубку / сбросил / недоступен</strong> и разговор не состоялся.</li>
+        <li>После каждого недозвона — <strong style="color:var(--text);">всегда делаем два донабора</strong>.</li>
+        <li>Каждый НДЗ фиксируется в CRM статусом, комментарием и задачей на следующее касание.</li>
+        <li>Касания чередуем: звонок → сообщение в мессенджере / SMS → звонок.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Касания по шагам</h2>
+
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">1</div>
+            <span class="accordion-title">Касание №1 — первый недозвон</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:16px; color:var(--text-muted);"><strong style="color:var(--text);">Когда:</strong> сразу после появления заявки или по задаче.</p>
+            <div class="fixation-steps">
+              <div class="fixation-step">
+                <div class="fixation-step-num">1</div>
+                <div class="fixation-step-content"><p>Совершаем звонок.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">2</div>
+                <div class="fixation-step-content">
+                  <p>Если клиент не ответил:</p>
+                  <ul class="key-points" style="margin-top:8px;">
+                    <li>Фиксируем НДЗ в CRM.</li>
+                    <li>Ставим задачу: на этот же день во второй половине дня (если звонили утром) или на следующий рабочий день (если звонили во второй половине дня).</li>
+                    <li>Отправляем краткое сообщение в мессенджере / SMS.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="quote-block" style="margin-top:16px;">
+              <span class="quote-label">Сообщение клиенту</span>
+              «Здравствуйте! Это [имя] из школы Matrius. Вы оставляли заявку на пробный урок по скорочтению. Пыталась до вас дозвониться, напишите, пожалуйста, когда удобно поговорить, или я перезвоню завтра.»
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">2</div>
+            <span class="accordion-title">Касание №2</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:16px; color:var(--text-muted);"><strong style="color:var(--text);">Когда:</strong> на следующий рабочий день после первого НДЗ.</p>
+            <div class="fixation-steps">
+              <div class="fixation-step">
+                <div class="fixation-step-num">1</div>
+                <div class="fixation-step-content"><p>Повторный звонок.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">2</div>
+                <div class="fixation-step-content">
+                  <p>Если клиент не ответил:</p>
+                  <ul class="key-points" style="margin-top:8px;">
+                    <li>Фиксируем второй НДЗ в CRM.</li>
+                    <li>Ставим задачу через <strong style="color:var(--text);">2–3 дня</strong> (лучше в другое время суток, чем в первый раз).</li>
+                    <li>Отправляем второе сообщение.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="quote-block" style="margin-top:16px;">
+              <span class="quote-label">Сообщение клиенту</span>
+              «Дублирую: это [имя] из Matrius. Хотим согласовать с вами удобное время для пробного урока по скорочтению. Напишите, пожалуйста, как лучше: я позвоню в определённое время или удобнее общаться здесь?»
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">3</div>
+            <span class="accordion-title">Касание №3 — финальное</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:16px; color:var(--text-muted);"><strong style="color:var(--text);">Когда:</strong> через 2–3 дня после второго НДЗ.</p>
+            <div class="fixation-steps">
+              <div class="fixation-step">
+                <div class="fixation-step-num">1</div>
+                <div class="fixation-step-content"><p>Третий звонок — лучше в другое время дня (если раньше был день, пробуем вечер).</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">2</div>
+                <div class="fixation-step-content">
+                  <p>Если всё ещё НДЗ:</p>
+                  <ul class="key-points" style="margin-top:8px;">
+                    <li>Фиксируем третий НДЗ в CRM.</li>
+                    <li>Отправляем последнее сообщение.</li>
+                    <li>Переводим в статус <strong style="color:var(--text);">«Закрыто и нереализовано»</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="quote-block" style="margin-top:16px;">
+              <span class="quote-label">Сообщение клиенту</span>
+              «Вижу, сейчас не очень удобно выходить на связь. Если пробный урок по скорочтению актуален, дайте, пожалуйста, знать, когда лучше связаться. Если пока неактуально, тоже можно просто написать "неактуально" — чтобы мы вас лишний раз не беспокоили.»
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title" style="margin:48px 0 24px;">Дополнительные правила</h2>
+
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <div class="scenario-card">
+        <div class="scenario-label">Клиент написал текстом, но не берёт трубку</div>
+        <p>Считаем, что связь есть. Дальше работаем через удобный для него канал (мессенджер / чат), звонки сокращаем.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Клиент написал «не звоните» / «не интересно»</div>
+        <p>Сразу переводим в отказ. Задачи и дальнейшие НДЗ по нему не ставим.</p>
+      </div>
+    </div>
+
+    <div class="info-block" style="margin-top:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        Сводка по касаниям
+      </div>
+      <ul class="key-points">
+        <li>Минимум: <strong style="color:var(--text);">3 попытки дозвона</strong> в разные дни и время + до 3 сообщений.</li>
+        <li>После 3 НДЗ без ответа — по согласованным правилам ставим отложенный спрос (если лид важный) либо переводим в статус <strong style="color:var(--text);">«Не выходит на связь / Архив»</strong>.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

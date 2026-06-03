@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нецелевые лиды — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .nontarget-hero-inner { grid-template-columns: 1fr !important; }
+      .nontarget-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="nontarget-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Нецелевые лиды</h1>
+        <p class="hero-text">Как квалифицировать нецелевые заявки, правильно их фиксировать и защищать свою конверсию.</p>
+      </div>
+      <div class="nontarget-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/001.png" alt="Нецелевые лиды" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Что такое нецелевой лид
+      </div>
+      <p style="margin-bottom:16px;">В таблицу заносим только те лиды, по которым вы <strong style="color:var(--text);">уже позвонили и взяли в работу</strong>, но в ходе разговора выяснили, что это не наш целевой клиент. Такие лиды исключаются из вашей конверсии.</p>
+      <a href="https://forms.gle/pdULwS9AJtMz5VNC6" target="_blank" style="color:var(--accent-light); word-break:break-all;">https://forms.gle/pdULwS9AJtMz5VNC6</a>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">В таблицу заносим, если при звонке выяснилось</h2>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:40px;">
+      <div class="scenario-card">
+        <div class="scenario-label">Отвечает не родитель</div>
+        <p>Бабушка, дедушка или другой родственник, который не является законным представителем ребёнка и не готов подключать родителей.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">На связи сам ребёнок</div>
+        <p>Взрослых рядом нет, телефон родителя не даёт.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Неадекватное поведение</div>
+        <p>Агрессия, оскорбления, явное троллирование или откровенно неадекватные ответы.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Фейковый или искажённый контакт</div>
+        <p>Заведомо несерьёзные данные, явный спам, тестовые заявки, дубликаты от других сотрудников.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Человек однозначно не про ребёнка</div>
+        <p>«Это вообще не про детей», «У меня нет детей», «Мне просто было интересно» — и нет возможности или смысла выйти на целевой диалог с родителем.</p>
+      </div>
+    </div>
+
+    <div class="quote-block" style="margin-bottom:40px;">
+      Если есть сомнения — лучше занести в таблицу и коротко пояснить.
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Как заполнять строку в таблице</h2>
+
+    <div class="fixation-steps" style="margin-bottom:40px;">
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <p><strong style="color:var(--text);">Ссылка на лид из CRM</strong> — вставляете прямую ссылку на карточку лида.</p>
+        </div>
+      </div>
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <p><strong style="color:var(--text);">Краткое пояснение</strong> — 1–2 предложения о причине.</p>
+          <ul class="key-points" style="margin-top:12px;">
+            <li>«Ответила бабушка, родители живут отдельно, контактов не даёт.»</li>
+            <li>«На связи ребёнок 9 лет, родителей рядом нет, телефон родителя не даёт.»</li>
+            <li>«Клиент вёл себя агрессивно, отказался разговаривать, оскорблял.»</li>
+            <li>«Человек без детей, сказал, что заявку оставил случайно / ради интереса.»</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        Важно по конверсии
+      </div>
+      <p style="margin-bottom:16px;">Все строки, занесённые в список и проверенные руководителем, <strong style="color:var(--text);">не учитываются</strong> в вашей конверсии по взятию в работу, квалификации, записи и т.д.</p>
+      <p style="margin-bottom:12px;">Чтобы лид был исключён из конверсии, он обязательно должен быть:</p>
+      <ul class="key-points">
+        <li>реально прозвонен;</li>
+        <li>занесён в таблицу с ссылкой и понятным комментарием.</li>
+      </ul>
+      <p style="margin-top:16px; color:var(--text-muted);">Так мы защищаем конверсию сотрудников от мусорных лидов и одновременно фиксируем, куда уходит нецелевой трафик.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

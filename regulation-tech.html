@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Технические проблемы — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .tech-hero-inner { grid-template-columns: 1fr !important; }
+      .tech-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="tech-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Технические проблемы</h1>
+        <p class="hero-text">Что делать при сбоях с АМО, админкой или телефонией — порядок действий и цепочка эскалации.</p>
+      </div>
+      <div class="tech-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/017.png" alt="Технические проблемы" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="fixation-steps">
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Сначала разбираетесь сами</h4>
+          <p>Если что-то не работает (АМО, админка, телефония):</p>
+          <ul class="key-points" style="margin-top:8px;">
+            <li>Перезагружаем страницу, чистим кэш и куки, меняем браузер.</li>
+            <li>Перезагружаем компьютер.</li>
+            <li>Проверяем всё, что можем с нашей стороны.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Если сами не справились — пишите руководителю</h4>
+          <p style="margin-bottom:8px;">Пишите лично или в рабочий чат: <a href="https://t.me/Jane547547" target="_blank" style="color:var(--accent-light);">https://t.me/Jane547547</a></p>
+          <p>Вместе разбираемся: что могло пойти не так, что уже пробовали. Руководитель проверит со своей стороны.</p>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">3</div>
+        <div class="fixation-step-content">
+          <h4>Если руководитель не может решить сам</h4>
+          <p style="margin-bottom:12px;">Руководитель готовит обращение к техническим специалистам:</p>
+          <ul class="key-points" style="margin-bottom:16px;">
+            <li>По АМО — в поддержку АМО.</li>
+            <li>По админке — к администраторам.</li>
+            <li>По телефонии — к ответственным за телефонию.</li>
+          </ul>
+          <div class="warning-block">
+            <div class="warning-block-title">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L1.5 15.5h15L9 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7v4M9 13v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Важно
+            </div>
+            <p style="color:#fca5a5;">Вы <strong style="color:#fca5a5;">не пишете техспециалистам сами</strong> в личку и не обращаетесь в другие отделы напрямую.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">4</div>
+        <div class="fixation-step-content">
+          <h4>Как общаемся по техническим вопросам</h4>
+          <p>Всё только через группы — вы все в них есть. Первое время — строго через руководителя: он отправляет запрос, следит за ответом, доводит решение до всей команды. Главное — чтобы все видели ответ и знали, как решается проблема.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

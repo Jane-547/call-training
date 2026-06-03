@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мотивация — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .motiv-hero-inner { grid-template-columns: 1fr !important; }
+      .motiv-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="motiv-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Мотивация</h1>
+        <p class="hero-text">Система оплаты и KPI оператора: первый месяц и постоянный режим.</p>
+      </div>
+      <div class="motiv-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/016.png" alt="Мотивация" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div style="display:flex; flex-direction:column; gap:40px;">
+
+      <div>
+        <h2 class="section-title" style="margin-bottom:20px;">Первый месяц работы</h2>
+        <div style="display:flex; justify-content:center;">
+          <img src="pictures/mot_1.png" alt="Мотивация — первый месяц" style="max-width:50%; border-radius:var(--radius); border:1px solid var(--border);">
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title" style="margin-bottom:20px;">Со второго месяца и далее</h2>
+        <div style="display:flex; justify-content:center;">
+          <img src="pictures/mot_2.png" alt="Мотивация — постоянный режим" style="max-width:50%; border-radius:var(--radius); border:1px solid var(--border);">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скрипт — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .script-hero-inner { grid-template-columns: 1fr !important; }
+      .script-hero-img { display: none; }
+    }
+    .script-note {
+      font-size: 0.85rem;
+      color: var(--accent-light);
+      font-style: italic;
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      background: var(--accent-dim);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link active">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="script-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator" style="font-size:1.4rem; font-weight:700; letter-spacing:0.02em;">Скрипт</div>
+        <h1 style="margin:16px 0 20px;">10 шагов звонка</h1>
+        <p class="hero-text">Полный скрипт разговора с родителем — от приветствия до финального закрепления записи.</p>
+      </div>
+      <div class="script-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/006.png" alt="Скрипт звонка" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="accordion">
+
+      <!-- Шаг 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">1</div>
+            <span class="accordion-title">Приветствие и рамка</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Говорить с улыбкой, сразу назвать повод, не тараторить.</p>
+            <div class="quote-block" style="margin-bottom:12px;">
+              «Добрый день, [Имя], это [ваше имя] из школы скорочтения Матриус, звоню по вашей заявке на пробный диагностический урок для ребёнка. Всё верно?»
+            </div>
+            <p style="margin-bottom:8px; color:var(--text-muted);">Если нет имени:</p>
+            <div class="quote-block" style="margin-bottom:12px;">«Супер. Скажите, пожалуйста, как вас зовут?»</div>
+            <p class="script-note">После ответа — короткое тёплое присоединение.</p>
+            <div class="quote-block">«Лилия, очень приятно. Рада с вами познакомиться. За 2–3 минуты задам несколько вопросов про ребёнка, расскажу, как проходит диагностика, и подберём время. Подходит?»</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">2</div>
+            <span class="accordion-title">Коротко о школе</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Не читать портянку — говорить «по‑человечески», 1–2 предложения.</p>
+            <div class="quote-block" style="margin-bottom:20px;">«В двух словах о нас. Матриус — онлайн‑школа скорочтения и развития мышления для детей 5–15 лет, с гослицензией. Всё проходит онлайн, чтобы можно было заниматься из любого города. На диагностике смотрим скорость чтения, понимание и внимание и даём рекомендации под вашего ребёнка. Хорошо?»</div>
+            <div class="scenario-card">
+              <div class="scenario-label">Клиент: «Думала, это офлайн — хочу офлайн»</div>
+              <div class="quote-block" style="margin-top:8px;">«Понимаю ваш запрос на офлайн, это привычнее. При этом онлайн у нас по качеству ничем не уступает: занятия идут вживую с преподавателем по видеосвязи, это не запись; педагог видит ребёнка, его реакцию, ошибки и сразу корректирует; все упражнения и диагностика идут на интерактивной платформе, которую как раз удобно проходить онлайн. По опыту, дети быстро привыкают к такому формату, а родители ценят, что не нужно тратить время на дорогу, и можно подключаться даже в загруженные дни.»</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">3</div>
+            <span class="accordion-title">Диагностика и запрос</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">После каждого ответа клиента — короткая реакция + уточнение.</p>
+            <div class="fixation-steps">
+              <div class="fixation-step">
+                <div class="fixation-step-num">—</div>
+                <div class="fixation-step-content">
+                  <div class="quote-block">«Как зовут ребёнка и сколько ему лет? В какой класс идёт/учится?»</div>
+                  <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">→ «Поняла, [имя], [возраст], [класс].»</p>
+                </div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">—</div>
+                <div class="fixation-step-content">
+                  <div class="quote-block">«Как сейчас с чтением у [имя]: скорее легко, нормально или есть сложности?»</div>
+                  <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">→ «Понимаю, это частая история. А что учитель говорит про чтение и работу с текстом?»</p>
+                </div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">—</div>
+                <div class="fixation-step-content">
+                  <div class="quote-block">«А вы сами чего больше всего хотите от пробного урока? Что для вас будет главным результатом?»</div>
+                  <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">→ «Верно ли понимаю, что для вас главное — [перефразировать: быстрее/понимать/оценки]?»</p>
+                </div>
+              </div>
+            </div>
+            <p class="script-note" style="margin-top:12px;">Обязательно сделать мини‑перефраз.</p>
+            <div class="quote-block" style="margin-top:8px;">«Правильно понимаю: [имя], [возраст/класс], сейчас с чтением [кратко из слов родителя], и вы в первую очередь хотите [ключевая цель родителя]. Тогда на диагностике как раз проверим скорость, понимание и внимание и дадим рекомендации под вашу ситуацию.»</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 4 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">4</div>
+            <span class="accordion-title">Проверка готовности к курсу и дисциплине</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Говорить спокойным уверенным тоном, без давления.</p>
+            <div class="quote-block" style="margin-bottom:12px;">«Пробный урок у нас диагностический: преподаватель смотрит, где сейчас сложности, показывает формат занятий и даёт четкий план развития вашего ребенка. Если вы увидите, что это действительно помогает [имя ребёнка], и ему самому понравится, вы в принципе рассматриваете регулярные занятия в формате курса?»</div>
+            <div class="quote-block">«И ещё один момент. Как у вас обычно с онлайн‑занятиями: получается приходить вовремя или часто что‑то мешает?»</div>
+            <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">→ «Поняла, спасибо, что честно сказали.» (Не оценивать, просто отметить.)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 5 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">5</div>
+            <span class="accordion-title">Участие взрослого</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Подчёркивать важность родителя, а не «контроль ребёнка».</p>
+            <div class="quote-block">«Ещё важный момент. Мы проводим диагностику только при участии мамы или папы. Нам важно, чтобы вы сами увидели задания, где у [имя ребёнка] сейчас сложности и какой прогресс может быть. Вам удобно присутствовать на уроке вместе с ребёнком?»</div>
+            <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">→ «Отлично, тогда подберём время, когда вы сможете быть вместе на связи.»</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 6 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">6</div>
+            <span class="accordion-title">Выбор времени</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Говорить спокойно, не суетиться, не озвучивать сомнения вслух.</p>
+            <div class="quote-block" style="margin-bottom:12px;">«У вас московское время?»</div>
+            <p style="margin-bottom:12px; color:var(--text-muted); font-size:0.9rem;">Если нет — кратко уточняем разницу: «Сейчас в Москве [X] часов, у вас сколько? Значит, разница [N] часов.»</p>
+            <div class="quote-block" style="margin-bottom:12px;">«Какая половина дня вам удобнее: первая или вторая?»</div>
+            <div class="quote-block">«Тогда есть ближайшие варианты: в [день 1] в [время 1] по Москве, или в [день 2] в [время 2] по Москве. Какой вариант вам удобнее?»</div>
+            <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">→ «Отлично. Итак, записываю вас на [день недели], [дата], в [время] по Москве.»</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 7 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">7</div>
+            <span class="accordion-title">Фиксация обязательства</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Говорить медленнее, чётко, смотреть на одну точку, не печатать.</p>
+            <div class="quote-block" style="margin-bottom:12px;">«Правильно понимаю, что вы будете с [имя ребёнка] онлайн [дата] в [время] по Москве?»</div>
+            <p style="margin-bottom:12px; color:var(--text-muted); font-size:0.9rem;">Ждём чёткое «да».</p>
+            <div class="quote-block">«Если вдруг понимаете, что что‑то форс‑мажорное, пожалуйста, предупредите не позже чем за 3 часа, чтобы я успела отдать слот другой семье. Договорились?»</div>
+            <p class="script-note" style="margin-top:12px;">Не бояться паузы — дождаться «да, договорились».</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 8 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">8</div>
+            <span class="accordion-title">Ценность слота</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p class="script-note">Не зачитывать — сказать коротко и искренне.</p>
+            <div class="quote-block">«Я записываю вас к преподавателю, который много работает как раз с такими запросами, как у [имя ребёнка]. Это ближайшее свободное окно у него, хорошо, что получилось попасть именно на [день], [время].»</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 9 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">9</div>
+            <span class="accordion-title">Канал связи и поведение при напоминании</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <div class="quote-block" style="margin-bottom:20px;">«Чтобы не потерять ссылку и держать связь, где вам удобнее общаться: в Telegram, WhatsApp или ещё где‑то?»</div>
+            <div class="scenario-card" style="margin-bottom:12px;">
+              <div class="scenario-label">Telegram можно найти по номеру</div>
+              <p class="script-note" style="margin-top:8px;">Ищем с личного аккаунта аккаунт клиента.</p>
+              <div class="quote-block" style="margin-top:8px;">«Отлично, фиксирую: будем писать вам в [мессенджер]. В день урока пришлю туда напоминание и ссылку. Как только увидите сообщение, просто ответьте одним словом "Да, будем", чтобы я видела, что всё в силе. Ок?»</div>
+              <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem;">Клиент должен вслух согласиться — это обязательная фраза.</p>
+            </div>
+            <div class="scenario-card">
+              <div class="scenario-label">Клиента нет в Telegram — подключение через ссылку</div>
+              <div class="fixation-steps" style="margin-top:8px;">
+                <div class="fixation-step">
+                  <div class="fixation-step-num">—</div>
+                  <div class="fixation-step-content"><div class="quote-block">«Смотрите, я вам сейчас отправлю СМС — там ссылка на выбор мессенджера. Одну секундочку… Вот, отправила. Получили?»</div></div>
+                </div>
+                <div class="fixation-step">
+                  <div class="fixation-step-num">—</div>
+                  <div class="fixation-step-content"><div class="quote-block">«Перейдите, пожалуйста, по ссылке — там откроются четыре варианта: ВКонтакте, WhatsApp, Telegram и Max. Рекомендую выбрать Max, он самый стабильный и сообщения точно доходят.»</div></div>
+                </div>
+                <div class="fixation-step">
+                  <div class="fixation-step-num">—</div>
+                  <div class="fixation-step-content"><div class="quote-block">«У вас сейчас открылся бот? Тогда нажмите "Старт". Бот попросит написать номер телефона — введите тот, на который я сейчас звоню.»</div></div>
+                </div>
+                <div class="fixation-step">
+                  <div class="fixation-step-num">—</div>
+                  <div class="fixation-step-content"><div class="quote-block">«Дальше бот спросит о запросе — просто напишите "скорочтение". Я вас сразу увижу в системе и смогу туда отправить всю информацию по записи. Получилось?»</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шаг 10 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">10</div>
+            <span class="accordion-title">Техника и финальное закрепление</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <div class="quote-block" style="margin-bottom:16px;">«Что понадобится на урок: ноутбук/компьютер или планшет, микрофон и включённая камера, чтобы преподаватель видел, как [имя ребёнка] работает с текстом и упражнениями. После занятия преподаватель даст вам обратную связь по уровню и предложит план, как развивать скорость и понимание чтения — если формат вам откликнется.»</div>
+            <p style="margin-bottom:8px; color:var(--text-muted);">Финальный повтор:</p>
+            <div class="quote-block">«Итак, жду вас с [имя ребёнка] в [день недели], [дата], в [время] по Москве. Я заранее напишу вам в [мессенджер], вы отвечаете "Да, будем", и мы встречаемся. Если вдруг понимаете, что не успеваете — обязательно дайте знать не позже чем за 3 часа. Договорились?»</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section-sm" style="padding:48px 0;">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:24px;">Материалы по скрипту</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <div class="module-card">
+        <div class="module-card-title">Ключевые фразы</div>
+        <div class="module-card-footer">
+          <a href="script-phrases.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-card-title">Мини-чек-лист «как не быть роботом»</div>
+        <div class="module-card-footer">
+          <a href="script-checklist.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-card-title">Шпаргалка: 10 шагов звонка</div>
+        <div class="module-card-footer">
+          <a href="script-cheatsheet.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="index.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Главная</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

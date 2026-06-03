@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как закрывать сделки — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .close-hero-inner { grid-template-columns: 1fr !important; }
+      .close-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link active">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="close-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">GetCourse</div>
+        <h1 style="margin:16px 0 20px;">Как закрывать сделки</h1>
+        <p class="hero-text">Порядок действий при закрытии заказа — нецелевой, отказ на уроке или завершение работы по регламенту.</p>
+      </div>
+      <div class="close-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/019.png" alt="Закрытие сделок" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:32px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Когда закрываем сделку
+      </div>
+      <ul class="key-points">
+        <li>Нецелевой лид.</li>
+        <li>Отказ на уроке.</li>
+        <li>Проработали всё согласно регламенту, но оплата не получена.</li>
+      </ul>
+    </div>
+
+    <div class="fixation-steps">
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Меняем статусы</h4>
+          <ul class="key-points" style="margin-bottom:16px;">
+            <li>В поле <strong style="color:var(--text);">«Состояние доски продаж»</strong> → Этап — ставим <strong style="color:var(--text);">«Отменён»</strong>, выбираем причину.</li>
+            <li>В поле <strong style="color:var(--text);">«Состояние заказа»</strong> → Статус — ставим <strong style="color:var(--text);">«Отменён»</strong>, выбираем причину.</li>
+          </ul>
+          <div class="warning-block">
+            <div class="warning-block-title">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L1.5 15.5h15L9 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7v4M9 13v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Важно
+            </div>
+            <p style="color:#fca5a5;">Причину выбираем в полях, но <strong style="color:#fca5a5;">комментарии в поле не прописываем</strong> — всё фиксируем в примечании к пользователю.</p>
+          </div>
+          <img src="pictures/get_3.png" alt="Состояние заказа" style="max-width:100%;border-radius:8px;margin:16px 0 0;border:1px solid var(--border)">
+        </div>
+      </div>
+
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Нажимаем «Сохранить»</h4>
+          <img src="pictures/get_4.png" alt="Сохранить" style="max-width:100%;border-radius:8px;margin:8px 0 0;border:1px solid var(--border)">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="getcourse.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Работа со сделками в GetCourse</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

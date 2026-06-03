@@ -3,50 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Обучение операторов — Матриус</title>
+  <title>Портал оператора — Матриус</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .portal-hero {
+      padding: 72px 0 64px;
+      background:
+        radial-gradient(ellipse 70% 80% at 80% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 10% 90%, rgba(88, 28, 196, 0.12) 0%, transparent 55%);
+      position: relative;
+      overflow: hidden;
+    }
+    .portal-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(124,58,237,0.1) 1px, transparent 0);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .portal-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+    .portal-hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .portal-hero-image {
+      position: relative;
+    }
+    .portal-hero-image img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      box-shadow: 0 8px 48px rgba(124, 58, 237, 0.2), 0 2px 12px rgba(0,0,0,0.4);
+      display: block;
+    }
+    .audience-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .chip-new {
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      color: #86efac;
+    }
+    .chip-new::before { content: ''; width: 5px; height: 5px; background: #22c55e; border-radius: 50%; flex-shrink: 0; }
+    .chip-exp {
+      background: rgba(124, 58, 237, 0.12);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      color: var(--accent-light);
+    }
+    .chip-exp::before { content: ''; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+    @media (max-width: 768px) {
+      .portal-hero { padding: 48px 0 40px; }
+      .portal-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .portal-hero-image { order: -1; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="container">
     <div class="header-inner">
       <a href="index.html" class="logo">
         <img src="logo.webp" alt="Матриус" class="logo-img">
-        <span class="logo-sub">Обучение операторов</span>
+        <span class="logo-sub">Портал оператора</span>
       </a>
       <nav class="site-nav">
-        <a href="index.html" class="nav-link">Главная</a>
-        <a href="module-1.html" class="nav-link">Модуль 1</a>
-        <a href="module-2.html" class="nav-link">Модуль 2</a>
-        <a href="module-3.html" class="nav-link">Модуль 3</a>
-        <a href="module-4.html" class="nav-link">Регламент</a>
+        <a href="index.html" class="nav-link active">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
       </nav>
-      <button class="hamburger" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="portal-hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-tag">Обучение операторов 1 линии</div>
-        <h1 class="hero-title">Приглашение на диагностику: от скрипта к уверенной речи</h1>
-        <p class="hero-text">Эти материалы сделаны не «для галочки» — они дадут опору и уверенность с первого выхода на линию.</p>
-        <a href="#modules" class="btn btn-primary">
-          Начать обучение
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+    <div class="portal-hero-inner">
+      <div class="portal-hero-text">
+        <div class="audience-chips">
+          <span class="chip chip-new">Новичкам — с нуля</span>
+          <span class="chip chip-exp">Действующим — под рукой</span>
+        </div>
+        <h1 class="hero-title">Всё для работы оператора — в одном месте</h1>
+        <p class="hero-text">Обучение с нуля до первого звонка, скрипт, работа с негативом и полный регламент — ничего лишнего.</p>
       </div>
-      <div class="hero-image">
-        <img src="1.png" alt="Обучение операторов">
+      <div class="portal-hero-image">
+        <img src="1.png" alt="Портал оператора Матриус">
       </div>
     </div>
   </div>
@@ -54,89 +120,51 @@
 
 <div class="divider"></div>
 
-<!-- WHY SECTION -->
 <section class="section">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Почему это важно?</h2>
-      <p class="section-subtitle">За каждой заявкой стоит реальная семья. Ваш звонок — первый шаг к их решению.</p>
-    </div>
-    <div class="why-grid">
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-          </svg>
-        </div>
-        <h3>Доходимость ≥ 50%</h3>
-        <p>Наша цель — доходимость не ниже 50% по ключевым слотам. От вашего разговора зависит, придут ли родители на диагностику.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 2a7 7 0 1 1 0 14A7 7 0 0 1 12 2z"/><path d="M12 16v6M8 20h8"/>
-          </svg>
-        </div>
-        <h3>Уверенность с первого звонка</h3>
-        <p>Структура и живая речь дают опору: вы ведёте разговор, а не импровизируете в панике, глядя в скрипт.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
-        </div>
-        <h3>Польза для родителя</h3>
-        <p>За каждой заявкой — тревога родителя. Правильный звонок помогает им увидеть реальную пользу диагностики.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- MODULES -->
-<section class="section" id="modules">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Программа обучения</h2>
-      <p class="section-subtitle">Три модуля с практикой и один раздел регламентов — всё что нужно для уверенного старта.</p>
-    </div>
-    <div class="modules-grid">
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:24px; margin-bottom:24px;">
 
       <div class="module-card">
-        <div class="module-num">01</div>
-        <div class="module-card-title">Структура звонка</div>
-        <p class="module-card-desc">11 шагов от приветствия до финального закрепления. Что говорить по шагам за 5–10 минут разговора.</p>
+        <div class="module-card-title">Обучение</div>
+        <p class="module-card-desc">Модули для новых операторов: структура звонка, живая речь без скрипта, фиксация времени и слотов.</p>
         <div class="module-card-footer">
-          <a href="module-1.html" class="btn btn-outline btn-sm">Перейти →</a>
+          <a href="training.html" class="btn btn-outline btn-sm">Открыть →</a>
         </div>
       </div>
 
       <div class="module-card">
-        <div class="module-num">02</div>
-        <div class="module-card-title">Как не быть роботом</div>
-        <p class="module-card-desc">Живые реакции, перефраз, работа без клавиатуры. Как говорить, а не читать текст в трубку.</p>
-        <div class="module-card-footer">
-          <a href="module-2.html" class="btn btn-outline btn-sm">Перейти →</a>
-        </div>
-      </div>
-
-      <div class="module-card">
-        <div class="module-num">03</div>
-        <div class="module-card-title">Фиксация времени и слотов</div>
-        <p class="module-card-desc">Как проговаривать время, работать с форс-мажорами и объяснять ценность слота без давления.</p>
-        <div class="module-card-footer">
-          <a href="module-3.html" class="btn btn-outline btn-sm">Перейти →</a>
-        </div>
-      </div>
-
-      <div class="module-card">
-        <div class="module-num">04</div>
         <div class="module-card-title">Регламент работы</div>
-        <p class="module-card-desc">Должностные обязанности, нормы, чек-листы и регламенты — всё для уверенного рабочего дня.</p>
+        <p class="module-card-desc">Обязанности, нормы по лидам и звонкам, рабочее окружение, шаблоны, нештатные ситуации.</p>
         <div class="module-card-footer">
-          <a href="module-4.html" class="btn btn-outline btn-sm">Перейти →</a>
+          <a href="regulation.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-card-title">Скрипт</div>
+        <p class="module-card-desc">Полный текст скрипта по 10 шагам, ключевые фразы, чек-лист и шпаргалка оператора.</p>
+        <div class="module-card-footer">
+          <a href="script.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:24px;">
+
+      <div class="module-card" style="flex: 0 0 calc(33.33% - 8px);">
+        <div class="module-card-title">Негативщики и как с ними работать</div>
+        <p class="module-card-desc">Алгоритм работы с агрессией, раздражением и отказами. Примеры реплик и разбор ситуаций.</p>
+        <div class="module-card-footer">
+          <a href="negatives.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+
+      <div class="module-card" style="flex: 0 0 calc(33.33% - 8px);">
+        <div class="module-card-title">Работа со сделками в GetCourse</div>
+        <p class="module-card-desc">Первая линия, примечания, закрытие сделок, смена почты клиента — пошаговые инструкции.</p>
+        <div class="module-card-footer">
+          <a href="getcourse.html" class="btn btn-outline btn-sm">Открыть →</a>
         </div>
       </div>
 
@@ -144,71 +172,6 @@
   </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- HOW TO WORK -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Как работать с материалами</h2>
-      <p class="section-subtitle">Три принципа, которые делают обучение рабочим.</p>
-    </div>
-    <div class="how-list">
-      <div class="how-item">
-        <div class="how-num">01</div>
-        <div class="how-content">
-          <h3>Читай как инструкцию к практике</h3>
-          <p>Почитал — тут же проговорил вслух, записал себя на аудио, попробовал в ролевой игре. Не откладывай практику «на потом».</p>
-        </div>
-      </div>
-      <div class="how-item">
-        <div class="how-num">02</div>
-        <div class="how-content">
-          <h3>Не заучивай слово в слово</h3>
-          <p>Важно понимать смысл каждого шага: зачем мы это спрашиваем, что хотим услышать и к чему ведём родителя.</p>
-        </div>
-      </div>
-      <div class="how-item">
-        <div class="how-num">03</div>
-        <div class="how-content">
-          <h3>Критерий готовности к линии</h3>
-          <p>Ты можешь по памяти рассказать структуру звонка, перефразировать запрос родителя и спокойно произнести фразу фиксации.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- WHAT'S NEXT -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Что будет дальше</h2>
-      <p class="section-subtitle">После изучения всех модулей — три шага до выхода на линию.</p>
-    </div>
-    <div class="steps-flow">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <h3>Ролевые звонки</h3>
-        <p>Пройдёшь несколько звонков в ролевой игре с тренером — отработаешь структуру в безопасной среде.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <h3>Разбор реальных диалогов</h3>
-        <p>Вместе разберём пару реальных диалогов: что хорошо сработало, что стоит изменить.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <h3>Чек-лист готовности</h3>
-        <p>Перед выходом на линию получишь чек-лист для самопроверки.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
     <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>

@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаблоны сообщений — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .templates-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .templates-table thead th {
+      padding: 14px 20px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: left;
+      background: var(--surface);
+      color: var(--accent-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .templates-table thead th:first-child {
+      width: 200px;
+      border-right: 1px solid var(--border);
+    }
+
+    .templates-table tbody tr {
+      border-top: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .templates-table tbody tr:hover {
+      background: var(--card-hover);
+    }
+
+    .templates-table tbody tr:first-child {
+      border-top: none;
+    }
+
+    .templates-table td {
+      padding: 18px 20px;
+      vertical-align: top;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .templates-table td:first-child {
+      width: 200px;
+      border-right: 1px solid var(--border);
+      background: rgba(124, 58, 237, 0.05);
+    }
+
+    .template-label {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .template-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      background: var(--accent-dim);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      border-radius: 100px;
+      padding: 2px 8px;
+    }
+
+    .template-text {
+      color: var(--text-muted);
+      font-style: italic;
+      position: relative;
+    }
+
+    .placeholder {
+      color: var(--accent-light);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 4px 10px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+
+    .copy-btn.copied {
+      border-color: var(--success);
+      color: var(--success);
+    }
+
+    @media (max-width: 768px) {
+      .tmpl-hero-inner { grid-template-columns: 1fr !important; }
+      .tmpl-hero-img { display: none; }
+    }
+    @media (max-width: 768px) {
+      .templates-table thead { display: none; }
+      .templates-table tbody tr { display: block; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; }
+      .templates-table td { display: block; width: 100% !important; border-right: none !important; border-top: none; }
+      .templates-table td:first-child { background: var(--surface); border-bottom: 1px solid var(--border); border-radius: var(--radius) var(--radius) 0 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="tmpl-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Шаблоны сообщений</h1>
+        <p class="hero-text">Готовые тексты для НДЗ, переносов, отмен и подключения к уроку — с возможностью скопировать в один клик.</p>
+      </div>
+      <div class="tmpl-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/015.png" alt="Шаблоны сообщений" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <table class="templates-table">
+      <thead>
+        <tr>
+          <th>Ситуация</th>
+          <th>Шаблон сообщения</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            <span class="template-label">НДЗ-1</span>
+            <span class="template-tag">Недозвон</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="Здравствуйте! Это [имя] из школы Matrius. Вы оставляли заявку на пробный урок по скорочтению. Пыталась до вас дозвониться, напишите, пожалуйста, когда удобно поговорить или я перезвоню завтра.">
+              Здравствуйте! Это <span class="placeholder">[имя]</span> из школы Matrius. Вы оставляли заявку на пробный урок по скорочтению. Пыталась до вас дозвониться, напишите, пожалуйста, когда удобно поговорить или я перезвоню завтра.
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="template-label">НДЗ-2</span>
+            <span class="template-tag">Недозвон</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="Дублирую: это [имя] из Matrius. Хотим согласовать с вами удобное время для пробного урока по скорочтению. Напишите, пожалуйста, как лучше: я позвоню в определённое время или удобнее общаться здесь?">
+              Дублирую: это <span class="placeholder">[имя]</span> из Matrius. Хотим согласовать с вами удобное время для пробного урока по скорочтению. Напишите, пожалуйста, как лучше: я позвоню в определённое время или удобнее общаться здесь?
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="template-label">НДЗ-3</span>
+            <span class="template-tag">Недозвон</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="Вижу, сейчас не очень удобно выходить на связь. Если пробный урок по скорочтению актуален, дайте, пожалуйста, знать, когда лучше связаться. Если пока неактуально, тоже можно просто написать «неактуально» — чтобы мы вас лишний раз не беспокоили.">
+              Вижу, сейчас не очень удобно выходить на связь. Если пробный урок по скорочтению актуален, дайте, пожалуйста, знать, когда лучше связаться. Если пока неактуально, тоже можно просто написать «неактуально» — чтобы мы вас лишний раз не беспокоили.
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="template-label">Перенос урока</span>
+            <span class="template-tag">Запись</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="{имя родителя}, добрый день! Понимаю, что сегодня подключение не сложилось, такое иногда бывает. Очень не хочется, чтобы ребёнок остался без пробного урока, поэтому предлагаю просто перенести занятие 🌟 Сейчас свободны такие варианты: – {дата, время} – {дата, время} Подскажите, пожалуйста, какой вариант вам подойдёт лучше, и я сразу зафиксирую запись.">
+              <span class="placeholder">{имя родителя}</span>, добрый день! Понимаю, что сегодня подключение не сложилось, такое иногда бывает. Очень не хочется, чтобы ребёнок остался без пробного урока, поэтому предлагаю просто перенести занятие 🌟 Сейчас свободны такие варианты:<br>– <span class="placeholder">{дата, время}</span><br>– <span class="placeholder">{дата, время}</span><br>Подскажите, пожалуйста, какой вариант вам подойдёт лучше, и я сразу зафиксирую запись.
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="template-label">Отмена урока</span>
+            <span class="template-tag">Запись</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="{имя родителя}, добрый день! Мы несколько раз пытались с вами связаться, чтобы подтвердить пробный урок по скорочтению в Matrius 💙 Похоже, сейчас не самое удобное время, поэтому пока отменим запись, чтобы не занимать место в расписании. Если позже решите вернуться к занятиям — будем очень рады, всегда можно будет записаться повторно 🌟">
+              <span class="placeholder">{имя родителя}</span>, добрый день! Мы несколько раз пытались с вами связаться, чтобы подтвердить пробный урок по скорочтению в Matrius 💙 Похоже, сейчас не самое удобное время, поэтому пока отменим запись, чтобы не занимать место в расписании. Если позже решите вернуться к занятиям — будем очень рады, всегда можно будет записаться повторно 🌟
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="template-label">Смена ссылки</span>
+            <span class="template-tag">Техническое</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="Мы обновили ссылку для подключения к занятию: предыдущая может работать некорректно. Пожалуйста, переходите по этой актуальной ссылке: {ссылка}">
+              Мы обновили ссылку для подключения к занятию: предыдущая может работать некорректно. Пожалуйста, переходите по этой актуальной ссылке: <span class="placeholder">{ссылка}</span>
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="template-label">Инструкция подключения</span>
+            <span class="template-tag">За 10 мин до урока</span>
+          </td>
+          <td>
+            <div class="template-text" data-copy="Перед занятием вам придёт ссылка для подключения. Перейдите по ней — рекомендуем Яндекс.Браузер или Google Chrome. В открывшемся окне введите имя и нажмите «Продолжить в браузере». Разрешите доступ к камере и микрофону, затем нажмите «Начать». Вы попадёте в зал ожидания — преподаватель вас встретит и подключит к уроку. Если ссылка из письма не работает — проверьте папку «Спам» и отметьте письмо как «Не спам».">
+              Перед занятием вам придёт ссылка для подключения. Перейдите по ней — рекомендуем Яндекс.Браузер или Google Chrome. В открывшемся окне введите имя и нажмите «Продолжить в браузере». Разрешите доступ к камере и микрофону, затем нажмите «Начать». Вы попадёте в зал ожидания — преподаватель вас встретит и подключит к уроку. Если ссылка из письма не работает — проверьте папку «Спам» и отметьте письмо как «Не спам».
+            </div>
+            <button class="copy-btn" onclick="copyTemplate(this)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Скопировать
+            </button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function copyTemplate(btn) {
+    const textDiv = btn.previousElementSibling;
+    const text = textDiv.dataset.copy;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add('copied');
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Скопировано`;
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Скопировать`;
+      }, 2000);
+    });
+  }
+</script>
+</body>
+</html>

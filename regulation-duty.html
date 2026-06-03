@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дежурство — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .duty-hero-inner { grid-template-columns: 1fr !important; }
+      .duty-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link active">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="duty-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Регламент работы</div>
+        <h1 style="margin:16px 0 20px;">Дежурство</h1>
+        <p class="hero-text">Дежурный управляет переносами слотов, подтверждает встречи и держит связь с клиентами при нештатных ситуациях.</p>
+      </div>
+      <div class="duty-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/004.png" alt="Дежурство" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Обязанности дежурного
+      </div>
+      <ul class="key-points">
+        <li>Перенос встреч между диагностами в админке при нехватке времени у диагноста.</li>
+        <li>Поиск свободных слотов и диагностов (белые / неподтверждённые слоты) для переноса клиентов.</li>
+        <li>Отправка клиенту новой ссылки и информирование о переносе или технической задержке до 15 минут.</li>
+        <li>Подтверждение на завтра клиентов, назначенных на диагностов / лид-менеджеров, которые на выходном.</li>
+        <li>Прозвон назначенных клиентов после 18:00, постановка статусов «Подтвердил», «Игнор», «НДЗ».</li>
+        <li>Соблюдение правил работы со слотами: удалять свободный слот нового диагноста перед переносом, не создавать лишних слотов.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Процессы по шагам</h2>
+
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">1</div>
+            <span class="accordion-title">Перенос клиента с одного диагноста на другого</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <div class="fixation-steps">
+              <div class="fixation-step">
+                <div class="fixation-step-num">1</div>
+                <div class="fixation-step-content"><p>Диагност сообщает, что не успевает провести встречу в назначенное время.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">2</div>
+                <div class="fixation-step-content"><p>Заходим в админку, открываем расписание на нужное время.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">3</div>
+                <div class="fixation-step-content"><p>Ищем параллельные или ближайшие слоты у других диагностов (белые / неподтверждённые, фильтр «пусто»).</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">4</div>
+                <div class="fixation-step-content"><p>Проваливаемся в карточку нового диагноста и <strong style="color:var(--text);">удаляем его свободный слот</strong> (вводим DELETE большими буквами и подтверждаем).</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">5</div>
+                <div class="fixation-step-content"><p>Открываем запись исходного диагноста, меняем преподавателя на нового и сохраняем — слот появляется у нового диагноста.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">6</div>
+                <div class="fixation-step-content"><p>Берём личную ссылку нового диагноста из базы знаний и отправляем клиенту.</p></div>
+              </div>
+            </div>
+            <div class="quote-block" style="margin-top:16px;">
+              <span class="quote-label">Сообщение клиенту</span>
+              «Предыдущая ссылка может не работать или работать с помехами, пожалуйста, перейдите по этой новой ссылке для подключения к встрече».
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">2</div>
+            <span class="accordion-title">Нет свободных диагностов</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <ul class="key-points">
+              <li>Проверяем все доступные слоты и диагностов на требуемое время.</li>
+              <li>При отсутствии свободных слотов — фиксируем невозможность оперативного переноса.</li>
+              <li>Информируем клиента о технических неполадках и обещаем решить вопрос в течение 15 минут.</li>
+              <li>Координируем дальнейшее решение в рамках 15-минутного окна.</li>
+            </ul>
+            <div class="quote-block" style="margin-top:16px;">
+              <span class="quote-label">Сообщение клиенту</span>
+              «Возникли технические неполадки, мы решим вопрос в течение 15 минут, просим вас немного подождать».
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">3</div>
+            <span class="accordion-title">Подтверждение клиентов на следующий день</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <div class="fixation-steps">
+              <div class="fixation-step">
+                <div class="fixation-step-num">1</div>
+                <div class="fixation-step-content"><p>Определяем дату подтверждения, смотрим расписание на эту дату.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">2</div>
+                <div class="fixation-step-content"><p>В графике определяем диагностов и лид-менеджеров, которые на выходном.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">3</div>
+                <div class="fixation-step-content"><p>В админке выбираем сначала свои встречи, затем встречи сотрудников на выходном.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">4</div>
+                <div class="fixation-step-content"><p>После 18:00 прозваниваем всех назначенных клиентов.</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">5</div>
+                <div class="fixation-step-content"><p>По результатам проставляем статусы в админке: «Подтвердил», «Игнор», «НДЗ».</p></div>
+              </div>
+              <div class="fixation-step">
+                <div class="fixation-step-num">6</div>
+                <div class="fixation-step-content"><p>При недозвоне фиксируем НДЗ и ставим задачу ответственному лид-менеджеру на следующий день.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">4</div>
+            <span class="accordion-title">Перезапись клиента по запросу</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <ul class="key-points">
+              <li>2-я линия или дежурный фиксируют, что клиент не пришёл / просит перенести, ставят статус перезаписи с тегом ответственного.</li>
+              <li>Если клиент игнорирует звонки — остаётся за исходным лид-менеджером.</li>
+              <li>Если клиент выходит на связь — дежурный берёт его в работу как дежурный, а не как обычный оператор.</li>
+              <li>Предлагаем клиенту ближайшие два доступных дня.</li>
+              <li>Подбираем белый слот в админке, записываем с личной ссылкой диагноста.</li>
+              <li>Статус «Перезапись» сохраняется до фактического подтверждения новой встречи.</li>
+            </ul>
+            <div class="quote-block" style="margin-top:16px;">
+              <span class="quote-label">Сообщение клиенту</span>
+              «Можем предложить вам ближайшие свободные слоты в течение двух ближайших дней, выберите, пожалуйста, удобное время для переноса встречи».
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title" style="margin:48px 0 24px;">Особые случаи</h2>
+
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <div class="scenario-card">
+        <div class="scenario-label">Диагност не успевает на слот</div>
+        <p>Диагност заранее сообщает дежурному → переносим клиента по стандартному процессу → если свободных слотов нет, информируем клиента о 15-минутном ожидании.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Красный (отменённый) слот</div>
+        <p>Запись на отменённые слоты временно не производится. Дежурный помечает их как недоступные до выяснения причин отмены.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Клиент не выходит на связь (НДЗ)</div>
+        <p>Делаем прозвоны после 18:00, фиксируем статус НДЗ, клиент остаётся за исходным лид-менеджером. Вторая линия ставит задачи по повторному обзвону.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Дубли учеников в списке</div>
+        <p>Причина — статус «Есть договорённость» без последующей записи. Проверяем статусы, при необходимости уточняем имена и приводим записи к единому ученику.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Работа через Telegram-бот: клиент не ввёл номер</div>
+        <p>Объясняем последовательность: запуск бота → отправка запроса → ввод номера телефона. До ввода номера сделка и встреча не создаются.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="regulation.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Регламент работы</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

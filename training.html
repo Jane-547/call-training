@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обучение по звонкам на пробный урок — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .training-hero {
+      padding: 72px 0 64px;
+      background:
+        radial-gradient(ellipse 70% 80% at 80% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 10% 90%, rgba(88, 28, 196, 0.12) 0%, transparent 55%);
+      position: relative;
+      overflow: hidden;
+    }
+    .training-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(124,58,237,0.1) 1px, transparent 0);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .training-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+    .training-hero-image img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 48px rgba(124, 58, 237, 0.35));
+    }
+    .section-block {
+      margin-bottom: 48px;
+    }
+    .section-block:last-child {
+      margin-bottom: 0;
+    }
+    .readiness-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .readiness-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--success-dim);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .readiness-item::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    @media (max-width: 768px) {
+      .training-hero { padding: 48px 0 40px; }
+      .training-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .training-hero-image { order: -1; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link active">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="training-hero">
+  <div class="container">
+    <div class="training-hero-inner">
+      <div>
+        <div class="module-indicator">Обучение</div>
+        <h1 class="hero-title" style="margin: 16px 0 20px;">Обучение по звонкам на пробный урок</h1>
+        <p class="hero-text">Материалы сделаны не «для галочки» — чтобы с первого выхода на линию ты разговаривал с родителями уверенно, спокойно и по делу.</p>
+      </div>
+      <div class="training-hero-image">
+        <img src="pictures/007.png" alt="Обучение операторов Матриус">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-block">
+      <div class="info-block">
+        <div class="info-block-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Зачем всё это
+        </div>
+        <p style="margin-bottom:14px;">Родители оставляют заявку не просто так: за ней почти всегда стоит тревога — ребёнок медленно читает, не понимает текст, мучается с уроками. От того, как ты проведёшь разговор, зависит:</p>
+        <ul class="key-points">
+          <li>придут ли они вообще на диагностику;</li>
+          <li>увидят ли реальную пользу;</li>
+          <li>решат ли дальше заниматься с нами.</li>
+        </ul>
+        <p style="margin-top:14px;">Наша цель — доходимость не ниже 50% по ключевым слотам. Для этого важны не только скрипты, но и то, как ты ими пользуешься.</p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2 class="section-title" style="margin-bottom:24px;">Как устроено обучение</h2>
+      <div class="how-list">
+        <div class="how-item">
+          <div class="how-num">1</div>
+          <div class="how-content">
+            <h3>Структура звонка</h3>
+            <p>Что говорить по шагам, чтобы за 5–10 минут: понять ситуацию ребёнка, показать пользу диагностики, договориться о конкретном дне и времени и зафиксировать, что родитель будет онлайн в этот слот.</p>
+          </div>
+        </div>
+        <div class="how-item">
+          <div class="how-num">2</div>
+          <div class="how-content">
+            <h3>Как не быть роботом по скрипту</h3>
+            <p>Как говорить живо, а не «читать текст»: реагировать на ответы, перефразировать запрос родителя и не молчать во время звонка.</p>
+          </div>
+        </div>
+        <div class="how-item">
+          <div class="how-num">3</div>
+          <div class="how-content">
+            <h3>Фиксация времени, переносы и ценность слота</h3>
+            <p>Как проговаривать день и время по Москве, задавать фразу подтверждения и объяснять ценность слота — без давления, но так, чтобы люди приходили.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2 class="section-title" style="margin-bottom:24px;">Как с этим работать</h2>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="card">
+          <h4 style="margin-bottom:8px;">Читай как инструкцию, не как теорию</h4>
+          <p>Почитал — тут же проговорил вслух, записал себя на аудио, попробовал в ролевой игре.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin-bottom:8px;">Не заучивай текст слово в слово</h4>
+          <p>Важно понимать смысл каждого шага: зачем мы это спрашиваем, что хотим услышать и к чему ведём родителя.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2 class="section-title" style="margin-bottom:16px;">Критерий готовности к линии</h2>
+      <div class="readiness-list">
+        <div class="readiness-item">Ты можешь по памяти рассказать структуру звонка</div>
+        <div class="readiness-item">Можешь перефразировать запрос родителя в 1–2 предложения</div>
+        <div class="readiness-item">Можешь вслух спокойно сказать: «Правильно понимаю, что вы будете с [имя ребёнка] онлайн [дата] в [время] по Москве?» — без зажимов и стеснения</div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="info-block">
+        <div class="info-block-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Что будет дальше
+        </div>
+        <ul class="key-points">
+          <li>ты пройдёшь несколько ролевых звонков;</li>
+          <li>мы вместе разберём пару реальных диалогов — что хорошо, что надо изменить;</li>
+          <li>перед выходом на линию ты получишь чек‑лист, по которому сам сможешь проверить свою готовность.</li>
+        </ul>
+        <p style="margin-top:14px;">Задача обучения — не сделать из тебя робота по скрипту, а дать опору и уверенность, чтобы каждый твой звонок помогал родителю и приводил его на диагностику.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section-sm">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:24px;">Модули</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-bottom:24px;">
+      <div class="module-card">
+        <div class="module-num">1</div>
+        <div class="module-card-title">Структура звонка</div>
+        <p class="module-card-desc">10 шагов от приветствия до фиксации записи — с примерами и разбором каждого блока.</p>
+        <div class="module-card-footer">
+          <a href="module-1.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">2</div>
+        <div class="module-card-title">Как не быть роботом</div>
+        <p class="module-card-desc">Живая речь вместо чтения по скрипту: реакция на ответы, перефраз, работа с паузами.</p>
+        <div class="module-card-footer">
+          <a href="module-2.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content:center;">
+      <div class="module-card" style="flex: 0 0 calc(50% - 12px);">
+        <div class="module-num">3</div>
+        <div class="module-card-title">Фиксация времени и слотов</div>
+        <p class="module-card-desc">Как подтверждать запись, говорить про переносы без давления и объяснять ценность слота.</p>
+        <div class="module-card-footer">
+          <a href="module-3.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="index.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Главная</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

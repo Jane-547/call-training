@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работа со сделками в GetCourse — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .gc-hero-inner { grid-template-columns: 1fr !important; }
+      .gc-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link active">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="gc-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">GetCourse</div>
+        <h1 style="margin:16px 0 20px;">Работа со сделками в GetCourse</h1>
+        <p class="hero-text">Как фиксировать касания, оставлять примечания и работать со сделками в CRM.</p>
+      </div>
+      <div class="gc-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/010.webp" alt="GetCourse CRM" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:40px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Основное правило
+      </div>
+      <p style="margin-bottom:16px;">Каждое касание с родителем обязательно фиксируется в CRM через примечание. <strong style="color:var(--text);">Примечания ставятся после каждого действия — независимо от результата.</strong></p>
+      <p style="margin-bottom:8px;">Каждое примечание должно отражать:</p>
+      <ul class="key-points">
+        <li>Факт касания (звонок, сообщение, ответ, диалог).</li>
+        <li>Результат взаимодействия.</li>
+        <li>Дальнейшие действия — дату и цель следующего звонка.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Формат примечаний по ситуациям</h2>
+
+    <div class="accordion" style="margin-bottom:40px;">
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">1</div>
+            <span class="accordion-title">Не дозвонились (НДЗ)</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:12px;">Если звонок не состоялся — ставим статус НДЗ и номер попытки:</p>
+            <ul class="key-points" style="margin-bottom:16px;">
+              <li><strong style="color:var(--text);">НДЗ-1</strong> — первый недозвон</li>
+              <li><strong style="color:var(--text);">НДЗ-2</strong> — второй недозвон</li>
+              <li><strong style="color:var(--text);">НДЗ-3</strong> — третий недозвон</li>
+            </ul>
+            <p style="color:var(--text-muted); font-size:0.9rem;">После третьего недозвона заявка переходит в «не выходит на связь» — оператор не тратит на неё время без дополнительных указаний.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">2</div>
+            <span class="accordion-title">Диалог состоялся</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:12px;">Если разговор с родителем состоялся — указываем суть. Если записали на шоу-урок, фиксируем:</p>
+            <ul class="key-points">
+              <li>Приоритет (готов на обучение — да/нет)</li>
+              <li>В каком классе ребёнок</li>
+              <li>Часовой пояс клиента</li>
+              <li>В какой мессенджер отправить ссылку на ШУ</li>
+              <li>Что родитель говорил о проблемах ребёнка при записи</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">3</div>
+            <span class="accordion-title">Переписка в мессенджере</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:12px;">Если общение шло через текст:</p>
+            <div class="quote-block" style="margin-bottom:10px;">
+              <span class="quote-label">Пример</span>
+              Написала сообщение, родитель ответил «подумаю». Запланировать перезвон через день.
+            </div>
+            <div class="quote-block">
+              <span class="quote-label">Пример</span>
+              Сообщение отправлено, ответа нет — контроль через 24 часа.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-header-left">
+            <div class="step-badge">4</div>
+            <span class="accordion-title">Перенос или запись</span>
+          </div>
+          <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p style="margin-bottom:12px;">Если родитель записался или перенёс урок:</p>
+            <div class="quote-block" style="margin-bottom:10px;">
+              <span class="quote-label">Пример</span>
+              Записан на пробный урок 05.04 в 15:00.
+            </div>
+            <div class="quote-block">
+              <span class="quote-label">Пример</span>
+              Перенёс урок на 06.04, подтвердил время.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="warning-block" style="margin-bottom:40px;">
+      <div class="warning-block-title">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L1.5 15.5h15L9 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7v4M9 13v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Обязательные требования
+      </div>
+      <ul class="warning-list">
+        <li>Примечание ставится после каждого касания — без пропусков.</li>
+        <li>Формулировки короткие, по сути — без общих фраз вроде «звонок клиенту» или «нет связи».</li>
+        <li>Если несколько касаний за день — каждое фиксируется отдельно.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title" style="margin-bottom:24px;">Как добавить примечание</h2>
+
+    <div class="fixation-steps" style="margin-bottom:56px;">
+      <div class="fixation-step">
+        <div class="fixation-step-num">1</div>
+        <div class="fixation-step-content">
+          <h4>Открываем профиль клиента</h4>
+          <div style="display:flex; justify-content:center; margin-top:12px;">
+            <img src="pictures/get_1.png" alt="Переходим в профиль клиента" style="max-width:50%; border-radius:var(--radius); border:1px solid var(--border);">
+          </div>
+        </div>
+      </div>
+      <div class="fixation-step">
+        <div class="fixation-step-num">2</div>
+        <div class="fixation-step-content">
+          <h4>Нажимаем «карандаш», вводим текст и нажимаем «Добавить»</h4>
+          <div style="display:flex; justify-content:center; margin-top:12px;">
+            <img src="pictures/get_2.png" alt="Добавляем примечание" style="max-width:50%; border-radius:var(--radius); border:1px solid var(--border);">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section-sm" style="padding:48px 0;">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:24px;">Разделы GetCourse</h2>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px;">
+      <div class="module-card">
+        <div class="module-card-title">Процесс первой линии</div>
+        <div class="module-card-footer">
+          <a href="getcourse-firstline.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-card-title">Как закрывать сделки</div>
+        <div class="module-card-footer">
+          <a href="getcourse-close.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-card-title">Как оставлять примечания</div>
+        <div class="module-card-footer">
+          <a href="getcourse-notes.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-card-title">Как поменять почту пользователю</div>
+        <div class="module-card-footer">
+          <a href="getcourse-email.html" class="btn btn-outline btn-sm">Открыть →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="index.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Главная</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

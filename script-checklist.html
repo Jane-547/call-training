@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мини-чек-лист «как не быть роботом по скрипту» — Матриус</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .checklist-hero-inner { grid-template-columns: 1fr !important; }
+      .checklist-hero-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="Матриус" class="logo-img">
+        <span class="logo-sub">Портал оператора</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="training.html" class="nav-link">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link active">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
+      </nav>
+      <button class="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="module-hero">
+  <div class="container">
+    <div class="checklist-hero-inner" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Скрипт</div>
+        <h1 style="margin:16px 0 20px;">Мини-чек-лист «как не быть роботом по скрипту»</h1>
+        <p class="hero-text">Проверь себя после каждого звонка — эти пункты отделяют живой разговор от чтения по бумажке.</p>
+      </div>
+      <div class="checklist-hero-img" style="display:flex; justify-content:center;">
+        <img src="pictures/012.png" alt="Чек-лист оператора" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-block" style="margin-bottom:32px;">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Как использовать
+      </div>
+      <p style="margin:0;">Пробегись по этому списку в конце каждого звонка. Если хотя бы один пункт вызывает сомнения — это точка роста на следующий раз.</p>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Чек-лист
+      </div>
+      <ul class="key-points">
+        <li>Не печатаю в CRM во время звонка.</li>
+        <li>После каждого ответа клиента — короткая живая реакция («понимаю», «это частая история», «классно, что вы об этом думаете») + 1 уточняющий вопрос.</li>
+        <li>Обязательно один раз перефразирую цель родителя своими словами.</li>
+        <li>Не читаю длинно про школу и ФГОС — говорю в 1–2 предложениях по смыслу.</li>
+        <li>
+          Всегда проговариваю фразы:
+          <div class="quote-block" style="margin-top:10px;">«Правильно понимаю, что вы будете с [имя ребёнка] онлайн [дата] в [время] по Москве?»</div>
+          <div class="quote-block">«Можем так зафиксировать: вы берёте на себя обязательство быть в это время на связи?»</div>
+        </li>
+        <li>Договариваюсь про поведение на напоминание: «ответьте "Да, будем"».</li>
+        <li>Если связь подвисла или что‑то не расслышал — признаю это вслух и переформулирую, не делаю вид, что всё норм.</li>
+        <li>Если считаем часовой пояс — делаю это вслух вместе с клиентом, не mumble «короче».</li>
+        <li>В сложных местах (время, техника, ссылка) говорю медленнее, а не быстрее.</li>
+        <li>Всегда заканчиваю чётким резюме: день, дата, время, канал связи, что клиент делает при напоминании.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+  <nav class="module-nav">
+    <a href="script.html" class="module-nav-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><span class="nav-direction">Назад</span>Скрипт</div>
+    </a>
+  </nav>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Школа скорочтения Матриус. Внутренние учебные материалы.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

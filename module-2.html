@@ -14,14 +14,14 @@
     <div class="header-inner">
       <a href="index.html" class="logo">
         <img src="logo.webp" alt="Матриус" class="logo-img">
-        <span class="logo-sub">Обучение операторов</span>
+        <span class="logo-sub">Портал оператора</span>
       </a>
       <nav class="site-nav">
         <a href="index.html" class="nav-link">Главная</a>
-        <a href="module-1.html" class="nav-link">Модуль 1</a>
-        <a href="module-2.html" class="nav-link">Модуль 2</a>
-        <a href="module-3.html" class="nav-link">Модуль 3</a>
-        <a href="module-4.html" class="nav-link">Регламент</a>
+        <a href="training.html" class="nav-link active">Обучение</a>
+        <a href="regulation.html" class="nav-link">Регламент</a>
+        <a href="script.html" class="nav-link">Скрипт</a>
+        <a href="getcourse.html" class="nav-link">GetCourse</a>
       </nav>
       <button class="hamburger" aria-label="Меню">
         <span></span><span></span><span></span>
@@ -33,11 +33,25 @@
 <!-- MODULE HERO -->
 <section class="module-hero">
   <div class="container">
-    <div class="module-indicator">Модуль 2 из 4</div>
-    <h1>Как не быть роботом по скрипту</h1>
-    <p class="hero-text">Скрипт — это карта, а не текст для чтения. Клиент должен слышать, что вы разговариваете с ним.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="module-indicator">Модуль 2 из 4</div>
+        <h1 style="margin:16px 0 20px;">Как не быть роботом по скрипту</h1>
+        <p class="hero-text">Скрипт — это карта, а не текст для чтения. Клиент должен слышать, что вы разговариваете с ним.</p>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <img src="pictures/012.png" alt="Как не быть роботом" style="width:100%; max-width:380px; border-radius:20px; filter:drop-shadow(0 0 40px rgba(124,58,237,0.3));">
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    .module-hero .container > div { grid-template-columns: 1fr !important; }
+    .module-hero .container > div > div:last-child { display: none; }
+  }
+</style>
 
 <!-- MAIN IDEA -->
 <section class="section">
